@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Winkelview extends JFrame{
+public class Winkelview extends JPanel{
 
 	JLabel UpgradeTitel;
 	
