@@ -14,7 +14,7 @@ import javafx.scene.text.Font;
 public class KlikkerApp extends JFrame{    
 
 
-	public static void main( String args[] ) {    
+	public static void main( String args[] ) {
 
 		JFrame frame = new KlikkerApp();     
 		frame.setSize(470,720);
@@ -27,13 +27,5 @@ public class KlikkerApp extends JFrame{
 	} 
 }
 
-class KlikkerAppPanel extends JPanel {
-
-	private JSplitPane splitPane;
-	
-	public void SplitPaneDividerDemo() {
-		setLayout( new BorderLayout() );
-		add(button, BorderLayout.PAGE_START);
-    }
 
 }
