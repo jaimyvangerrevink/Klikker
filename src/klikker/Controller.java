@@ -3,8 +3,7 @@ package klikker;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class Controller {
-    public static class Main extends Application {
+public class Controller extends Application {
 
         @Override
         public void start(Stage primaryStage) throws Exception{
@@ -15,5 +14,5 @@ public class Controller {
         public static void main(String[] args) {
             launch(args);
         }
-    }
+   
 }

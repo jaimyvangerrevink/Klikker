@@ -22,7 +22,7 @@ public class KnopView {
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
         rules.setText("Welkom bij Klikker. \n"
-        		+ "gemaakt door Damian, Daniël & Jaimy.");
+        		+ "gemaakt door Damian, DaniÃ«l & Jaimy.");
         
         //Uitleg knop
         Button spelspelenknop = new Button("SPEL SPELEN");
