@@ -12,11 +12,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class KnopView extends PuntenModel{
-	
-	PuntenModel punten = new PuntenModel();
-	punten.setPunten(0);
-	// het maken van het help scherm.
+
     public void knopScherm() {
+    	PuntenModel punten = new PuntenModel();
+    	punten.setPunten(0);
         Stage stage = new Stage();
         stage.setTitle("Klikker");
         AnchorPane welcomeScreen = new AnchorPane();
@@ -32,7 +31,8 @@ public class KnopView extends PuntenModel{
             @Override
             public void handle(ActionEvent event) {
             	
-            	
+            	punten.addPunten(1);
+            	rules.setText("Aantal punten: " + punten.getPunten());
 
             }
         });
