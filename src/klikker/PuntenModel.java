@@ -10,4 +10,8 @@ public class PuntenModel {
 	public void addPunten(double aantalpunten) {
 		this.totaalpunten = this.totaalpunten + aantalpunten;
 	}
+	
+	public void setPunten(double aantalpunten) {
+		this.totaalpunten = aantalpunten;
+	}
 }

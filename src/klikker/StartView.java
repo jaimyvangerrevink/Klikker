@@ -15,9 +15,9 @@ public class StartView {
 	// het maken van het help scherm.
     public void startScherm() {
         Stage stage = new Stage();
-        stage.setTitle("Klikker");
+        stage.setTitle("Klikker - Start");
         AnchorPane welcomeScreen = new AnchorPane();
-        Scene scene = new Scene(welcomeScreen, 320, 150);
+        Scene scene = new Scene(welcomeScreen, 320, 320);
         Label rules = new Label();
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
@@ -30,15 +30,17 @@ public class StartView {
             @Override
             public void handle(ActionEvent event) {
             	
+            	(new KnopView()).knopScherm();
+            	stage.close();
 //            	knopScherm();
 
             }
         });
         spelspelenknop.setStyle("-fx-base: #ffffff;");
-        spelspelenknop.setPrefHeight(30.0);
+        spelspelenknop.setPrefHeight(60.0);
         spelspelenknop.setPrefWidth(260.0);
         
-        setTopAnchor(spelspelenknop, 100.0);
+        setTopAnchor(spelspelenknop, 230.0);
         setLeftAnchor(spelspelenknop, 30.0);
         welcomeScreen.getChildren().addAll(rules, spelspelenknop);
         stage.setScene(scene);
