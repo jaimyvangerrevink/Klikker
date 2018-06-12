@@ -11,7 +11,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class KnopView {
+public class KnopView extends PuntenModel{
+	
+	PuntenModel punten = new PuntenModel();
+	punten.setPunten(0);
 	// het maken van het help scherm.
     public void knopScherm() {
         Stage stage = new Stage();
@@ -21,8 +24,7 @@ public class KnopView {
         Label rules = new Label();
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
-        rules.setText("Welkom bij Klikker. \n"
-        		+ "gemaakt door Damian, Daniël & Jaimy.");
+        rules.setText("Aantal punten: " + punten.getPunten());
         
         //Uitleg knop
         Button spelspelenknop = new Button("SPEL SPELEN");
@@ -30,7 +32,7 @@ public class KnopView {
             @Override
             public void handle(ActionEvent event) {
             	
-//            	knopScherm();
+            	
 
             }
         });
