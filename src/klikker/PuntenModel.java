@@ -6,6 +6,10 @@ public class PuntenModel {
 	public double getPunten() {
 		return this.totaalpunten;
 	}
+
+	public void setPunten(int p){
+		this.totaalpunten = p;
+	}
 	
 	public void addPunten(double aantalpunten) {
 		this.totaalpunten = this.totaalpunten + aantalpunten;

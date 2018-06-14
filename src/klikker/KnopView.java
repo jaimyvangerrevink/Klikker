@@ -11,7 +11,15 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
 public class KnopView {
+
+    public KnopView(){
+        PuntenModel punten = new PuntenModel();
+        punten.setPunten(0);
+    }
+
+
 	// het maken van het help scherm.
     public void knopScherm() {
         Stage stage = new Stage();
@@ -30,7 +38,8 @@ public class KnopView {
             @Override
             public void handle(ActionEvent event) {
             	
-//            	knopScherm();
+
+           	knopScherm();
 
             }
         });
