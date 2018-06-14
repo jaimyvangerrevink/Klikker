@@ -29,8 +29,8 @@ public class StartView {
         spelspelenknop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
-            	(new KnopView()).knopScherm();
+            	
+//            	knopScherm();
 
             }
         });
