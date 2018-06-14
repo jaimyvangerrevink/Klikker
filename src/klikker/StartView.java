@@ -22,18 +22,15 @@ public class StartView {
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
         rules.setText("Welkom bij Klikker. \n"
-        		+ "gemaakt door Damian, Daniï¿½l & Jaimy.");
+        		+ "gemaakt door Damian, Daniël & Jaimy.");
         
         //Uitleg knop
         Button spelspelenknop = new Button("SPEL SPELEN");
         spelspelenknop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-            	
-//            	knopScherm();
             	(new KnopView()).knopScherm();
             	stage.close();
-
             }
         });
         spelspelenknop.setStyle("-fx-base: #ffffff;");
