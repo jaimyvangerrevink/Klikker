@@ -21,13 +21,31 @@ public class KnopView {
         Stage stage = new Stage();
         stage.setTitle("Klikker");
         AnchorPane welcomeScreen = new AnchorPane();
-        Scene scene = new Scene(welcomeScreen, 320, 150);
-        Label rules = new Label();
-        setTopAnchor(rules, 30.0);
-        setLeftAnchor(rules, 30.0);
-        rules.setText("Aantal punten: " + punten.getPunten());
+        Scene scene = new Scene(welcomeScreen, 320, 390);
         
-        //klik knop
+        Label aantalPuntenLabel = new Label();
+        setTopAnchor(aantalPuntenLabel, 30.0);
+        setLeftAnchor(aantalPuntenLabel, 30.0);
+        aantalPuntenLabel.setText("Aantal punten: " + punten.getPunten());
+        
+      //winkel knop
+        Button winkelknop = new Button("WINKEL");
+        winkelknop.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+            	
+            	//code
+            	(new WinkelView()).winkelScherm();
+            }
+        });
+        winkelknop.setStyle("-fx-base: #ffffff;");
+        winkelknop.setPrefHeight(30.0);
+        winkelknop.setPrefWidth(100.0);
+        
+        setTopAnchor(winkelknop, 30.0);
+        setLeftAnchor(winkelknop, 190.0);
+        
+      //klik knop
         Button klikknop = new Button("KLIK VOOR PUNTEN");
         klikknop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -35,16 +53,17 @@ public class KnopView {
             	
             	//code
             	punten.addPunten(1);
-            	rules.setText("Aantal punten: " + punten.getPunten());
+            	aantalPuntenLabel.setText("Aantal punten: " + punten.getPunten());
             }
         });
         klikknop.setStyle("-fx-base: #ffffff;");
-        klikknop.setPrefHeight(30.0);
+        klikknop.setPrefHeight(260.0);
         klikknop.setPrefWidth(260.0);
         
         setTopAnchor(klikknop, 100.0);
         setLeftAnchor(klikknop, 30.0);
-        welcomeScreen.getChildren().addAll(rules, klikknop);
+        
+        welcomeScreen.getChildren().addAll(aantalPuntenLabel, winkelknop, klikknop);
         stage.setScene(scene);
         stage.show();
     }
