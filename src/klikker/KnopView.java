@@ -47,5 +47,7 @@ public class KnopView extends PuntenModel{
         welcomeScreen.getChildren().addAll(rules, spelspelenknop);
         stage.setScene(scene);
         stage.show();
+
+
     }
 }

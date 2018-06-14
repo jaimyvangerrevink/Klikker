@@ -22,7 +22,7 @@ public class StartView {
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
         rules.setText("Welkom bij Klikker. \n"
-        		+ "gemaakt door Damian, Daniël & Jaimy.");
+        		+ "gemaakt door Damian, Daniï¿½l & Jaimy.");
         
         //Uitleg knop
         Button spelspelenknop = new Button("SPEL SPELEN");
@@ -31,6 +31,7 @@ public class StartView {
             public void handle(ActionEvent event) {
 
             	(new KnopView()).knopScherm();
+
 
             }
         });
