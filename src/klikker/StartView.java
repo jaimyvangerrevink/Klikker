@@ -31,8 +31,12 @@ public class StartView {
             public void handle(ActionEvent event) {
             	
 //            	knopScherm();
+<<<<<<< HEAD
             	(new KnopView()).knopScherm();
             	stage.close();
+=======
+
+>>>>>>> parent of d2b4393... werkende klikker (knop niet winkel)
             }
         });
         spelspelenknop.setStyle("-fx-base: #ffffff;");
