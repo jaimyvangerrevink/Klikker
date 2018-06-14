@@ -31,7 +31,8 @@ public class StartView {
             public void handle(ActionEvent event) {
             	
 //            	knopScherm();
-
+            	(new KnopView()).knopScherm();
+            	stage.close();
             }
         });
         spelspelenknop.setStyle("-fx-base: #ffffff;");
