@@ -12,8 +12,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class KnopView {
+	
 	// het maken van het help scherm.
     public void knopScherm() {
+    	PuntenModel punten = new PuntenModel();
+        punten.setPunten(0);
+        
         Stage stage = new Stage();
         stage.setTitle("Klikker");
         AnchorPane welcomeScreen = new AnchorPane();
@@ -21,26 +25,26 @@ public class KnopView {
         Label rules = new Label();
         setTopAnchor(rules, 30.0);
         setLeftAnchor(rules, 30.0);
-        rules.setText("Welkom bij Klikker. \n"
-        		+ "gemaakt door Damian, Daniël & Jaimy.");
+        rules.setText("Aantal punten: " + punten.getPunten());
         
-        //Uitleg knop
-        Button spelspelenknop = new Button("SPEL SPELEN");
-        spelspelenknop.setOnAction(new EventHandler<ActionEvent>() {
+        //klik knop
+        Button klikknop = new Button("KLIK VOOR PUNTEN");
+        klikknop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
             	
-//            	knopScherm();
-
+            	//code
+            	punten.addPunten(1);
+            	rules.setText("Aantal punten: " + punten.getPunten());
             }
         });
-        spelspelenknop.setStyle("-fx-base: #ffffff;");
-        spelspelenknop.setPrefHeight(30.0);
-        spelspelenknop.setPrefWidth(260.0);
+        klikknop.setStyle("-fx-base: #ffffff;");
+        klikknop.setPrefHeight(30.0);
+        klikknop.setPrefWidth(260.0);
         
-        setTopAnchor(spelspelenknop, 100.0);
-        setLeftAnchor(spelspelenknop, 30.0);
-        welcomeScreen.getChildren().addAll(rules, spelspelenknop);
+        setTopAnchor(klikknop, 100.0);
+        setLeftAnchor(klikknop, 30.0);
+        welcomeScreen.getChildren().addAll(rules, klikknop);
         stage.setScene(scene);
         stage.show();
     }
